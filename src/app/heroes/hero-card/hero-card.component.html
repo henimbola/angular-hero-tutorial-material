@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title>
+        {{hero.name}}
+    </mat-card-title>
+    <mat-card-footer class="flex-end">
+        <a routerLink="/detail/{{hero.id}}">
+            <button mat-icon-button color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </a>
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon"
+            (click)="deleteItem()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-footer>
+</mat-card>

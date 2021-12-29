@@ -1,0 +1,18 @@
+<div class="flex-space-between header-content">
+  <h1>My Heroes</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hero Name</mat-label>
+      <input matInput placeholder="Ex. SpiderMan" #heroInput>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="add(heroInput.value); heroInput.value=''">
+      Add new
+    </button>
+  </form>
+</div>
+
+<mat-grid-list cols="5" rowHeight="3:1">
+  <mat-grid-tile *ngFor="let hero of heroes">
+    <app-hero-card [hero]=hero (onDeleteEvent)="deleteHero(hero)"></app-hero-card>
+  </mat-grid-tile>
+</mat-grid-list>
