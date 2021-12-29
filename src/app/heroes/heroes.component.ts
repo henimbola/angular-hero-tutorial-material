@@ -3,7 +3,6 @@ import { HEROES } from '../mock-heroes';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
-import { TitleService } from '../title.service';
 
 @Component({
   selector: 'app-heroes',
@@ -16,8 +15,7 @@ export class HeroesComponent implements OnInit {
 
   selectedHero?: Hero;
 
-  constructor(private heroService: HeroService, private titleService: TitleService) {
-    this.titleService.setTitle('Heroes');
+  constructor(private heroService: HeroService) {
   }
 
   ngOnInit(): void {
