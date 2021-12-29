@@ -16,6 +16,5 @@ export class TitleService {
 
   setTitle(title: string): void {
     this.title = title;
-    console.log('test');
   }
 }
